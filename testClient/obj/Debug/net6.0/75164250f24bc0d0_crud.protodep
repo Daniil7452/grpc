@@ -1,0 +1,4 @@
+obj\Debug\net6.0\Model\Repository\Protos/Crud.cs \
+obj\Debug\net6.0\Model\Repository\Protos/CrudGrpc.cs: C:/Users/daniil/.nuget/packages/grpc.tools/2.56.2/build/native/include/google/protobuf/empty.proto\
+ C:/Users/daniil/.nuget/packages/grpc.tools/2.56.2/build/native/include/google/protobuf/timestamp.proto\
+ Model/Repository/Protos/crud.proto

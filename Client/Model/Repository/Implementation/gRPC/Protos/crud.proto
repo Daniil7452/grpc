@@ -1,0 +1,36 @@
+syntax = "proto3";
+ 
+package RepositoryService;
+ 
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+ 
+service WorkerService{
+ 
+  rpc ListWorker(google.protobuf.Empty) returns (ListReply);
+  rpc GetWorker(GetWorkerRequest) returns (WorkerGrpcObj);
+  rpc CreateWorker(WorkerGrpcObj) returns (WorkerGrpcObj);
+  rpc UpdateWorker(WorkerGrpcObj) returns (WorkerGrpcObj);
+  rpc DeleteWorker(DeleteWorkerRequest) returns (WorkerGrpcObj);
+}
+message GetWorkerRequest{
+	int32 id = 1;
+}
+ 
+message DeleteWorkerRequest{
+	int32 id = 1;
+}
+ 
+message ListReply{
+	repeated WorkerGrpcObj Workers = 1;
+}
+ 
+message WorkerGrpcObj{
+	int32 id = 1;
+	string name = 2;
+	string surname = 3;
+	string patronymic = 4;
+	google.protobuf.Timestamp Birthday = 5;
+	int32 gender = 6;
+	bool having_children = 7;
+}
